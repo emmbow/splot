@@ -1,2 +1,0 @@
-class Allotment < ApplicationRecord
-end
