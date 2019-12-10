@@ -1,3 +1,3 @@
 class Site < ApplicationRecord
-  has_many :plots
+  has_many :plots, dependent: :destroy
 end
