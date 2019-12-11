@@ -1,16 +1,32 @@
+
+
+
 .plot-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-size: cover;
   width: 250px;
   height: 250px;
-  filter: grayscale(20%);
+  // filter: grayscale(50%);
   align-items: center;
   color: white;
-  font-weight: bolder;
-  p {
-    background-color: red;
+  border: solid 1px white;
+  h1 {
+    font-size: 1.3em;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #F85949;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-family: 'Alatsi', sans-serif;
   }
-
-
+  p {
+    color: #303030;
+    font-size: 0.8em;
+    background-color: #F8F8F8;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Alatsi', sans-serif;
+  }
 }
