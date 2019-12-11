@@ -1,0 +1,16 @@
+.plot-card {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  filter: grayscale(20%);
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  p {
+    background-color: red;
+  }
+
+
+}

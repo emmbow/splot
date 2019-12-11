@@ -1,6 +1,13 @@
 <div class="container">
   <h1>Plots</h1>
-  <% @plots.each do |plot|%>
-    <p><%= plot.plot_number %></p>
-  <% end %>
+  <div class="plot-grid row no-gutters">
+    <% @plots.each do |plot|%>
+      <div class="plot-card col-6 col-md-4 col-lg-3" style="background-image:  url(<%= plot.image_url %>);">
+        <h1><%= plot.plot_number %></h1>
+        <h2><%= plot.site.name %></h2>
+        <!-- <img src= <%= plot.image_url %> alt="various plots" height="250" width="250"> -->
+      </div>
+    <% end %>
+  </div>
 </div>
+

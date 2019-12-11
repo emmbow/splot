@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_08_182100) do
+ActiveRecord::Schema.define(version: 2019_12_11_094702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_182100) do
     t.datetime "updated_at", null: false
     t.string "soil_type"
     t.string "plot_number"
+    t.text "image_url"
     t.index ["site_id"], name: "index_plots_on_site_id"
   end
 
