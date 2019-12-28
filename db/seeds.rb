@@ -15,13 +15,13 @@ puts "Deleted all sites"
 
 
 puts "Creating sites"
-Site.create(name: "Stepney City Farm")
-Site.create(name: "Hackney City Farm")
-Site.create(name: "Spitalfields City Farm")
-Site.create(name: "Vauxhall City Farm")
-Site.create(name: "Kentish Town City Farm")
-Site.create(name: "Newham City Farm")
-Site.create(name: "Mudchute City Farm")
+Site.create(name: "Stepney City Farm", address: "London")
+Site.create(name: "Hackney City Farm", address: "London")
+Site.create(name: "Spitalfields City Farm", address: "London")
+Site.create(name: "Vauxhall City Farm", address: "London")
+Site.create(name: "Kentish Town City Farm", address: "London")
+Site.create(name: "Newham City Farm", address: "London")
+Site.create(name: "Mudchute City Farm", address: "London")
 
 puts "Created sites"
 

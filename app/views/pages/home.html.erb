@@ -3,18 +3,23 @@
 <div class="container">
 <!-- <p><%= @search_result %></p> -->
   <% if params[:query].nil? || @plots.nil? %>
-    <h1>Recently booked</h1>
-  <% elsif params[:query].present? && @plots == [] %>
-    <h1>No plots</h1>
+    <h1 class="title-plot-index">Recently booked</h1>
+  <% elsif params[:query] == "" && @plots == [] %>
+    <h1 class="title-plot-index">No plots</h1>
   <% else %>
     <h1 class="title-plot-index">Available plots</h1>
     <div class="plot-grid row no-gutters">
       <% @plots.each do |plot|%>
-        <div class="plot-card col-xs-12 col-sm-6 col-md-4 col-lg-3" style="background-image:  url(<%= plot.image_url %>);">
-          <h1><%= plot.plot_number %></h1>
-          <p><i class="fas fa-map-pin"></i> <%= plot.site.name %></p>
-          <!-- <img src= <%= plot.image_url %> alt="various plots" height="250" width="250"> -->
-        </div>
+        <%= link_to plot_path(plot),
+        class: "plot-card col-xs-12 col-sm-6 col-md-4 col-lg-3" do  %>
+        <!-- <div class="plot-card col-xs-12 col-sm-6 col-md-4 col-lg-3"> -->
+          <div class="plot-card-background-image" style="background-image:  url(<%= plot.image_url %>);">
+           <!--  <h1><%= plot.plot_number %></h1> -->
+          </div>
+            <p><i class="fas fa-map-pin"></i> <%= plot.site.name %></p>
+            <!-- <img src= <%= plot.image_url %> alt="various plots" height="250" width="250"> -->
+       <!--  </div> -->
+        <% end %>
       <% end %>
     </div>
   <% end %>

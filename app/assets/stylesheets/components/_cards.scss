@@ -1,29 +1,31 @@
 .plot-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-size: cover;
   width: 250px;
   height: 250px;
-  // filter: grayscale(50%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   align-items: center;
-  color: white;
   border: solid 1px white;
-  h1 {
-    font-size: 1.3em;
-    border-radius: 5px;
-    margin-top: 30px;
-    background-color: #F85949;
-    padding: 10px;
-    letter-spacing: 1px;
-    font-family: 'Alatsi', sans-serif;
+  // justify-content: space-between;
+  .plot-card-background-image {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
+  // filter: grayscale(50%);
   p {
     color: #303030;
     font-size: 0.8em;
-    background-color: #F8F8F8;
+    margin-top: 10px;
+    // background-color: #F8F8F8;
     padding: 5px;
     border-radius: 5px;
     font-family: 'Alatsi', sans-serif;
+  }
+  &:hover {
+    text-decoration: none;
+    border: solid 2px red;
+    // transition: 0.5s ease;
   }
 }

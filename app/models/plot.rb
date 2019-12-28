@@ -6,7 +6,7 @@ class Plot < ApplicationRecord
   pg_search_scope :global_search,
     against: [:plot_number],
     associated_against: {
-      site: [:name]
+      site: [:name, :address]
     },
     using: {
       tsearch: { prefix: true }
