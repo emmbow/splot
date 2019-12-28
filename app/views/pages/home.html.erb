@@ -1,1 +1,22 @@
-<h1>Hello world</h1>
+<%= render './plots/navbar' %>
+
+<div class="container">
+<!-- <p><%= @search_result %></p> -->
+  <% if params[:query].nil? || @plots.nil? %>
+    <h1>Recently booked</h1>
+  <% elsif params[:query].present? && @plots == [] %>
+    <h1>No plots</h1>
+  <% else %>
+    <h1 class="title-plot-index">Available plots</h1>
+    <div class="plot-grid row no-gutters">
+      <% @plots.each do |plot|%>
+        <div class="plot-card col-xs-12 col-sm-6 col-md-4 col-lg-3" style="background-image:  url(<%= plot.image_url %>);">
+          <h1><%= plot.plot_number %></h1>
+          <p><i class="fas fa-map-pin"></i> <%= plot.site.name %></p>
+          <!-- <img src= <%= plot.image_url %> alt="various plots" height="250" width="250"> -->
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
