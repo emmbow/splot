@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @plots = Plot.all
     @plots = Plot.global_search(params[:query])
     # if params[:query].present?
     #   @plots = []
