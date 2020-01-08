@@ -11,6 +11,12 @@ class PagesController < ApplicationController
     #   @plots
     #   end
     # end
+    # if params[:query].present?
+    #   @plots = Plot.global_search(params[:query])
+    #   redirect_to plots_path(@plots)
+    # else
+    #   render 'home'
+    # end
   end
 
   def search
